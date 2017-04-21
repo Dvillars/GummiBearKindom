@@ -5,12 +5,15 @@
 @model GummiBearKingdom.Models.Gummi
 
 <h2>Details</h2>
-<hr />
+<hr>
+@Html.ActionLink("Edit", "Edit", new { id = Model.GummiId }) | @Html.ActionLink("Delete", "Delete", new { id = Model.GummiId })
 
     <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 <ul>
+    <img src="@Html.DisplayFor(model => model.Image)" />
     <li>@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)</li>
     <li>@Html.DisplayNameFor(model => model.Country): @Html.DisplayFor(model => model.Country)</li>
+    
 </ul>
 
 

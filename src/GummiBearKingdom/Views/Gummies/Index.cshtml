@@ -5,12 +5,16 @@
 @model IEnumerable<GummiBearKingdom.Models.Gummi>
 
 <h2>Gummi Bear Kingdom</h2>
-<h4>@Html.DisplayNameFor(model => model.Name)</h4>
-@Html.ActionLink("Create New", "Create")
-<ol>
+@Html.ActionLink("Home", "index", "Home") | @Html.ActionLink("Create New", "Create")
+<hr>
+<div class="row">
     @foreach (var gummi in Model)
     {
-        <li>@Html.DisplayFor(modelItem => gummi.Name) | @Html.DisplayFor(modelItem => gummi.Cost) | @Html.ActionLink("Details", "Details", new { id = gummi.GummiId }) | @Html.ActionLink("Edit", "Edit", new { id = gummi.GummiId }) | @Html.ActionLink("Delete", "Delete", new { id = gummi.GummiId })</li>
+        
+        <div class="col-md-3">
+            <strong>@Html.ActionLink((string)@gummi.Name, "Details", new { id = gummi.GummiId })</strong>
+            <br>
+            <img src="@Html.DisplayFor(modelItem => gummi.Image)"/>
+        </div>
     }
-</ol>
-@Html.ActionLink("Home", "index", "Home")
+</div>

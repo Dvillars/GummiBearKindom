@@ -2,11 +2,11 @@
 ## by: Derek Villars
 
 ## Inspiration/Guide
-https://www.haribo.com/enUS/home.html
+*placeholder*
 
 ## About
 ### Description
-Square Hero is a basic hack and slash adventure game made in a few days by the above folks. Kill enemies! Get drops! Level up! What more can you ask for, apart from some real graphics? It's part of a group project assignment at Epicodus Code School in Seattle, WA.
+this is a gummi bear company here to sell you your delish candy.
 
 ### Technology
 * C#

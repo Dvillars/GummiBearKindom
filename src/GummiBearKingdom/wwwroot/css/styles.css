@@ -1,0 +1,18 @@
+﻿body {
+    background: linear-gradient(to right, #e8f0f1, violet);
+    color: #171762;
+}
+
+hr {
+    border: 5px #171762 solid;
+    border-radius: 5px;
+}
+
+img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.right {
+    float: right;
+}
