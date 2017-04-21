@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "To Do List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<GummiBearKingdom.Models.Gummi>
+
+<h2>Gummi Bear Kingdom</h2>
+<h4>@Html.DisplayNameFor(model => model.Name)</h4>
+@Html.ActionLink("Create New", "Create")
+<ol>
+    @foreach (var gummi in Model)
+    {
+        <li>@Html.DisplayFor(modelItem => gummi.Name) | @Html.DisplayFor(modelItem => gummi.Cost) | @Html.ActionLink("Details", "Details", new { id = gummi.GummiId }) | @Html.ActionLink("Edit", "Edit", new { id = gummi.GummiId }) | @Html.ActionLink("Delete", "Delete", new { id = gummi.GummiId })</li>
+    }
+</ol>
+@Html.ActionLink("Home", "index", "Home")

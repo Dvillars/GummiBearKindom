@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "To Do List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model GummiBearKingdom.Models.Gummi
+
+<h2>Details</h2>
+<hr />
+
+    <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<ul>
+    <li>@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)</li>
+    <li>@Html.DisplayNameFor(model => model.Country): @Html.DisplayFor(model => model.Country)</li>
+</ul>
+
+
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
