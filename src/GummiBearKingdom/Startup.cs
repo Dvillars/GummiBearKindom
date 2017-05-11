@@ -26,7 +26,6 @@ namespace GummiBearKingdom
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-
             services.AddEntityFramework()
                 .AddDbContext<GummiContext>(options =>
                     options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));

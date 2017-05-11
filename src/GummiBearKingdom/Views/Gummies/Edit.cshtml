@@ -11,19 +11,25 @@
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.GummiId)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+    </div>
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Cost)
+        @Html.EditorFor(model => model.Cost)
+    </div>
 
-    @Html.LabelFor(model => model.Cost)
-    @Html.EditorFor(model => model.Cost)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Image)
+        @Html.EditorFor(model => model.Image)
+    </div>
 
-    @Html.LabelFor(model => model.Image)
-    @Html.EditorFor(model => model.Image)
-
-    @Html.LabelFor(model => model.Country)
-    @Html.EditorFor(model => model.Country)
-
-    <input type="submit" value="Save" />
-}
-<p>@Html.ActionLink("Back to View", "Details", new { id = Model.GummiId })</p>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Country)
+        @Html.EditorFor(model => model.Country)
+    </div>
+        <input type="submit" value="Save" />
+        }
+        <p>@Html.ActionLink("Back to View", "Details", new { id = Model.GummiId })</p>

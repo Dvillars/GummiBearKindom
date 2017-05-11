@@ -9,18 +9,27 @@
 <h4>Add a new task</h4>
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
 
-    @Html.LabelFor(model => model.Cost)
-    @Html.TextBoxFor(model => model.Cost)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </div>
 
-    @Html.LabelFor(model => model.Image)
-    @Html.TextBoxFor(model => model.Image)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Cost)
+        @Html.TextBoxFor(model => model.Cost)
+    </div>
 
-    @Html.LabelFor(model => model.Country)
-    @Html.TextBoxFor(model => model.Country)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Image)
+        @Html.TextBoxFor(model => model.Image)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Country)
+        @Html.TextBoxFor(model => model.Country)
+    </div>
 
     <input type="submit" value="Add new Gummi" />
-}
+    }
 <p>@Html.ActionLink("Back to list", "Index")</p>
